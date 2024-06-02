@@ -49,7 +49,7 @@
                                         <a class="nav-link" href="#product">Ürünler</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#review">Popüler</a>
+                                        <a class="nav-link" href="#review">Yorumlar</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#contact">İletişim</a>
@@ -61,7 +61,27 @@
                                         <a class="nav-link" href="#"><i class="fa-solid fa-heart"></i></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                        <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"></i>
+                                            <span class="cart-count" id="cart-count">0</span>
+                                        </a>
+                                        <script>
+                                            let cartCount = 0;
+                                        
+                                            function addToCart() {
+                                                cartCount++;
+                                                document.getElementById('cart-count').innerText = cartCount;
+                                                const notification = document.getElementById('notification');
+        notification.style.display = 'block';
+
+        // 2 saniye sonra bildirimi gizle
+        setTimeout(() => {
+            notification.style.display = 'none';
+        }, 2000);
+
+
+                                            }
+                                        </script>
+                                         
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#"><i class="fa-solid fa-user"></i></a>
@@ -97,7 +117,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12" data-aos="fade-down">
-                    <h1 class="mainheading"><span class="clrchange">Hakkımızda</span> " "</h1>
+                    <h1 class="mainheading"><span class="clrchange">Hakkımızda</span> </h1>
                 </div>
             </div>
             <div class="row">
@@ -193,20 +213,23 @@
                         <img src="images/16340941-1745-40ab-899e-ed5a47c70999.jpg"  alt="Logo Image" />
                         <div class="cartcontainer">
                             <button class="wishlist"><i class="fa-solid fa-heart"></i></button>
-                            <button class="btn">Sepete Ekle <i class="fa-solid fa-cart-plus"></i></button>
+                            <button class="btn" onclick="addToCart()">Sepete Ekle <i class="fa-solid fa-cart-plus"></i></button>
+                            <div class="notification" id="notification">Ürün sepete eklendi!</div>
                             <button class="share"><i class="fa-solid fa-share"></i></button>
                         </div>
                         <h2>Çiçek adı</h2>
                         <h1 class="price"><span class="clrchange">tl15.99</span> </h1>
                     </div>
                 </div>
+                
                 <div class="col-sm-4" data-aos="fade-up">
                     <div class="innerproductsection">
                         
                         <img src="images/20ad2b6a-fa23-48c8-82c2-66beca176262.jpg" alt="Logo Image" />
                         <div class="cartcontainer">
                             <button class="wishlist"><i class="fa-solid fa-heart"></i></button>
-                            <button class="btn">Sepete Ekle  <i class="fa-solid fa-cart-plus"></i></button>
+                            <button class="btn" onclick="addToCart()">Sepete Ekle  <i class="fa-solid fa-cart-plus"></i></button>
+                            <div class="notification" id="notification">Ürün sepete eklendi!</div>
                             <button class="share"><i class="fa-solid fa-share"></i></button>
                         </div>
 
@@ -221,7 +244,8 @@
                         <img src="images/25f408f2-d385-43e8-adb0-5db7520af604.jpg" alt="Logo Image" />
                         <div class="cartcontainer">
                             <button class="wishlist"><i class="fa-solid fa-heart"></i></button>
-                            <button class="btn">Sepete Ekle <i class="fa-solid fa-cart-plus"></i></button>
+                            <button class="btn" onclick="addToCart()">Sepete Ekle <i class="fa-solid fa-cart-plus"></i></button>
+                            <div class="notification" id="notification">Ürün sepete eklendi!</div>
                             <button class="share"><i class="fa-solid fa-share"></i></button>
                         </div>
 
@@ -237,7 +261,8 @@
                         <img src="images/318bea07-8c70-46c8-9eea-5c9bcb131d6e.jpg" alt="Logo Image" />
                         <div class="cartcontainer">
                             <button class="wishlist"><i class="fa-solid fa-heart"></i></button>
-                            <button class="btn">Sepete Ekle  <i class="fa-solid fa-cart-plus"></i></button>
+                            <button class="btn" onclick="addToCart()">Sepete Ekle  <i class="fa-solid fa-cart-plus"></i></button>
+                            <div class="notification" id="notification">Ürün sepete eklendi!</div>
                             <button class="share"><i class="fa-solid fa-share"></i></button>
                         </div>
 
@@ -251,7 +276,8 @@
                         <img src="images/349e7205-e57c-4668-90e5-f84bc0fff623.jpg" alt="Logo Image" />
                         <div class="cartcontainer">
                             <button class="wishlist"><i class="fa-solid fa-heart"></i></button>
-                            <button class="btn">Sepete Ekle  <i class="fa-solid fa-cart-plus"></i></button>
+                            <button class="btn" onclick="addToCart()">Sepete Ekle  <i class="fa-solid fa-cart-plus"></i></button>
+                            <div class="notification" id="notification">Ürün sepete eklendi!</div>
                             <button class="share"><i class="fa-solid fa-share"></i></button>
                         </div>
 
@@ -265,7 +291,8 @@
                         <img src="images/1a580753-d674-40e2-a9b5-011c5def76a4.jpg" alt="Logo Image" />
                         <div class="cartcontainer">
                             <button class="wishlist"><i class="fa-solid fa-heart"></i></button>
-                            <button class="btn">Sepete Ekle  <i class="fa-solid fa-cart-plus"></i></button>
+                            <button class="btn" onclick="addToCart()">Sepete Ekle  <i class="fa-solid fa-cart-plus"></i></button>
+                            <div class="notification" id="notification">Ürün sepete eklendi!</div>
                             <button class="share"><i class="fa-solid fa-share"></i></button>
                         </div>
 
@@ -281,7 +308,8 @@
                         <img src="images/4cc69267-b909-43c5-8c95-c6690999d120.jpg" alt="Logo Image" />
                         <div class="cartcontainer">
                             <button class="wishlist"><i class="fa-solid fa-heart"></i></button>
-                            <button class="btn">Sepete Ekle  <i class="fa-solid fa-cart-plus"></i></button>
+                            <button class="btn" onclick="addToCart()" >Sepete Ekle <i class="fa-solid fa-cart-plus"></i></button>
+                            <div class="notification" id="notification">Ürün sepete eklendi!</div>
                             <button class="share"><i class="fa-solid fa-share"></i></button>
                         </div>
 
@@ -295,7 +323,8 @@
                         <img src="images/51daf8ec-6062-4bb6-b168-3049e61ee371.jpg" alt="Logo Image" />
                         <div class="cartcontainer">
                             <button class="wishlist"><i class="fa-solid fa-heart"></i></button>
-                            <button class="btn">Sepete Ekle  <i class="fa-solid fa-cart-plus"></i></button>
+                            <button class="btn" onclick="addToCart()">Sepete Ekle  <i class="fa-solid fa-cart-plus"></i></button>
+                            <div class="notification" id="notification">Ürün sepete eklendi!</div>
                             <button class="share"><i class="fa-solid fa-share"></i></button>
                         </div>
 
@@ -309,7 +338,8 @@
                         <img src="images/76f1f511-c325-4959-8c95-e32a5936ad6d.jpg" alt="Logo Image" />
                         <div class="cartcontainer">
                             <button class="wishlist"><i class="fa-solid fa-heart"></i></button>
-                            <button class="btn">Sepete Ekle  <i class="fa-solid fa-cart-plus"></i></button>
+                            <button class="btn" onclick="addToCart()">Sepete Ekle  <i class="fa-solid fa-cart-plus"></i></button>
+                            <div class="notification" id="notification">Ürün sepete eklendi!</div>
                             <button class="share"><i class="fa-solid fa-share"></i></button>
                         </div>
 
@@ -327,7 +357,8 @@
                         <img src="images/1ac8a1be-fba9-44f4-af2d-e878327e3e53.jpg" alt="Logo Image" />
                         <div class="cartcontainer">
                             <button class="wishlist"><i class="fa-solid fa-heart"></i></button>
-                            <button class="btn">Sepete Ekle  <i class="fa-solid fa-cart-plus"></i></button>
+                            <button class="btn" onclick="addToCart()">Sepete Ekle  <i class="fa-solid fa-cart-plus"></i></button>
+                            <div class="notification" id="notification">Ürün sepete eklendi!</div>
                             <button class="share"><i class="fa-solid fa-share"></i></button>
                         </div>
 
@@ -341,7 +372,8 @@
                         <img src="images/5b15808b-8b0e-4943-92a5-1b3d9c857447.jpg" alt="Logo Image" />
                         <div class="cartcontainer">
                             <button class="wishlist"><i class="fa-solid fa-heart"></i></button>
-                            <button class="btn">Sepete Ekle  <i class="fa-solid fa-cart-plus"></i></button>
+                            <button class="btn" onclick="addToCart()">Sepete Ekle  <i class="fa-solid fa-cart-plus"></i></button>
+                            <div class="notification" id="notification">Ürün sepete eklendi!</div>
                             <button class="share"><i class="fa-solid fa-share"></i></button>
                         </div>
 
@@ -355,7 +387,8 @@
                         <img src="images/5edb4e31-4ac6-4a18-9538-f263172d5020.jpg" alt="Logo Image" />
                         <div class="cartcontainer">
                             <button class="wishlist"><i class="fa-solid fa-heart"></i></button>
-                            <button class="btn">Sepete Ekle  <i class="fa-solid fa-cart-plus"></i></button>
+                            <button class="btn" onclick="addToCart()" >Sepete Ekle <i class="fa-solid fa-cart-plus"></i></button>
+                            <div class="notification" id="notification">Ürün sepete eklendi!</div>
                             <button class="share"><i class="fa-solid fa-share"></i></button>
                         </div>
 
@@ -368,10 +401,11 @@
                 <div class="col-sm-4" data-aos="fade-right">
                     <div class="innerproductsection">
                        
-                        <img src="images/" alt="Logo Image" />
+                        <img src="images/Tozpembe.jpg" alt="Logo Image" />
                         <div class="cartcontainer">
                             <button class="wishlist"><i class="fa-solid fa-heart"></i></button>
-                            <button class="btn">Sepete Ekle  <i class="fa-solid fa-cart-plus"></i></button>
+                            <button class="btn" onclick="addToCart()">Sepete Ekle  <i class="fa-solid fa-cart-plus"></i></button>
+                            <div class="notification" id="notification">Ürün sepete eklendi!</div>
                             <button class="share"><i class="fa-solid fa-share"></i></button>
                         </div>
 
@@ -385,7 +419,8 @@
                         <img src="images/e0a6d143-9310-4b33-bb8a-09846bbf08af.jpg" alt="Logo Image" />
                         <div class="cartcontainer">
                             <button class="wishlist"><i class="fa-solid fa-heart"></i></button>
-                            <button class="btn">Sepete Ekle  <i class="fa-solid fa-cart-plus"></i></button>
+                            <button class="btn" onclick="addToCart()" >Sepete Ekle <i class="fa-solid fa-cart-plus"></i></button>
+                            <div class="notification" id="notification">Ürün sepete eklendi!</div>
                             <button class="share"><i class="fa-solid fa-share"></i></button>
                         </div>
 
@@ -399,7 +434,8 @@
                         <img src="images/cfec5451-56aa-489a-b5f3-5f992618245f.jpg" alt="Logo Image" />
                         <div class="cartcontainer">
                             <button class="wishlist"><i class="fa-solid fa-heart"></i></button>
-                            <button class="btn">Sepete Ekle  <i class="fa-solid fa-cart-plus"></i></button>
+                            <button class="btn" onclick="addToCart()">Sepete Ekle  <i class="fa-solid fa-cart-plus"></i></button>
+                            <div class="notification" id="notification">Ürün sepete eklendi!</div>
                             <button class="share"><i class="fa-solid fa-share"></i></button>
                         </div>
 
@@ -505,10 +541,10 @@
                                 <p>"Hiç düşünmediğim şekilde sitenizden alışveriş yapmaya bağımlı oldum ve memnunum. İşlerinizde kolaylıklar ve başarılar diliyorum. Ve Teşekkürler.." </p>
                                 <div class="txtwithicon">
                                     <div class="iconcol">
-                                        <img src="./assets/testi2.png" alt="" class="testimg1">
+                                        <img src="images/ImgCreator.ai-1-9-6-0-long-redhead-cute-young-woman-looking-at-the-camera-wearing-a-black-French-beret-in-a-cute.webp" alt="" class="testimg1">
                                     </div>
                                     <div class="txtcol">
-                                        <h1>m.h</h1>
+                                        <h1>Selin Nazlı</h1>
                                         <p>Mutlu Müşteri</p>
                                     </div>
                                 </div>
